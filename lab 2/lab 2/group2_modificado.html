@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Group #10</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 1000px;
+      max-width: 100%;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+   
+  
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+        width: 250px; height: 250px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      padding-right: 200px;
+    }
+
+    nav span {
+      text-decoration: none;
+      color: #5B9BD5;
+      font-weight: bold;
+      padding: 50px 10px;
+      border-radius: 4px;
+      transition: background 0.3s;
+      font-size: 1.23em;
+    }
+
+    
+
+    h1 {
+      color: #5B9BD5;
+      margin: 20px 0 10px;
+    }
+
+    h2 {
+      color: #5B9BD5;
+      margin: 20px 0 10px;
+    }
+
+    .team-members {
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .main-content {
+      display: flex;
+      gap: 30px;
+      margin: 30px 0;
+    }
+
+    .left {
+      flex: 1;
+    }
+
+    .right {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 4px;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    input, textarea {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .checkbox-container input {
+      margin: 0 10px 0 0;
+    }
+
+    button {
+      background: #5B9BD5;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #4a85c5;
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+      }
+
+      .main-content {
+        flex-direction: column;
+      }
+
+      .right {
+        min-width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="Group Logo">
+      </div>
+      <nav>
+        <div class="title">
+          <span>WHO WE ARE</span>|
+          <span>WHAT WE DO</span>|
+          <span>CONTACTS</span>
+        </div>
+      </nav>
+    </header>
+
+    <h1>GROUP #10</h1>
+    <h2>COME AND WORK WITH US</h2>
+    <p class="team-members">Muhammad Ahmad Taha, Sandro Gomes, Saif Alnazer, Noor Alnazer</p>
+
+    <div class="main-content">
+      <div class="left">
+        <img src="PXL_20250201_165754313.png" alt="Group Photo">
+      </div>
+
+      <div class="right">
+        <h2>ASK INFO</h2>
+        <form>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="question">Question:</label>
+          <textarea id="question" name="question" required></textarea>
+
+          <div class="checkbox-container">
+            <input type="checkbox" id="price" name="price">
+            <label for="price">Price request?</label>
+          </div>
+
+          <button type="submit">ASK</button>
+          <a href="#" id="more-info-link" style="margin-top: 10px; color: #5B9BD5;">More information</a>
+        </form>
+        <div id="more-info" style="display: none; margin-top: 20px;">
+          <h3>More Information</h3>
+          <p>PHONE: 916941542<br>email: ahmadtaha903@gmail.com</p>
+          <a href="#" id="back-to-form-link" style="color: #5B9BD5;">Ask to meet us</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      © Group #10 2025<br>
+      Made by &lt;Muhammad Ahmad Taha (20241408), Sandro Gomes (20241936), Saif Alnazer (20240637), Noor Alnazer (20240638)&gt;
+    </footer>
+  </div>
+<script>
+      const moreInfoLink = document.getElementById('more-info-link');
+      const backToFormLink = document.getElementById('back-to-form-link');
+      const form = document.querySelector('.right form');
+      const moreInfoDiv = document.getElementById('more-info');
+
+      moreInfoLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        form.style.display = 'none';
+        moreInfoDiv.style.display = 'block';
+      });
+
+      backToFormLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        moreInfoDiv.style.display = 'none';
+        form.style.display = 'flex';
+      });
+    </script>
+    </body>
+</html>
